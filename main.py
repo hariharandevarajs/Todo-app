@@ -3227,6 +3227,7 @@ work with json - Actual method
 # rand = random.randint(parsed['lower_bound'], parsed['upper_bound'])
 #
 # print(rand)
+#print(parsed)
 '''
 
 check git working
