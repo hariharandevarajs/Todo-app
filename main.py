@@ -2733,9 +2733,9 @@ I used while loop to acheive this ...
 
 '''
 seperate the fuctions from main file to reduce long coding 
-create function.py file same dirtory where the main.py located and paste the function code there
+create function.py file same dirtory where the cli.py located and paste the function code there
 
-use starting line in main.py file import functions and inside the program call like functions.get_todos like that
+use starting line in cli.py file import functions and inside the program call like functions.get_todos like that
 
 '''
 # import functions
@@ -3212,7 +3212,7 @@ work with json - Actual method
 #     # Inject the values in a dictionary
 #     return {"lower_bound": lower_bound, "upper_bound": upper_bound}
 #
-# main.py
+# cli.py
 #
 # from parsers import parse
 # import random
@@ -3228,10 +3228,112 @@ work with json - Actual method
 #
 # print(rand)
 #print(parsed)
+
+
 '''
 
 check git working
 
+install git - current version
+then type console in git , get some random code without error menas u intalled successfully
+
+enable version control git option in menu
+
+you can be added gitignore as well , added into the files that like u dont want to files commit
+
+then give commit option selct files and save them that's all
+
+checkout revision options helps to see the cammit code changes 
+
+
 '''
+
+'''
+follow Next step Todo GUI directory 
+'''
+# import FreeSimpleGUI as sg
+#
+# label1 = sg.Text("Select the file to compress")
+# input1 = sg.InputText()
+# button1 = sg.FileBrowse("Choose")
+#
+# label2 = sg.Text("Select the Folder to compress")
+# input2 = sg.InputText()
+# button2 = sg.FolderBrowse("Choose")
+#
+# compress1=sg.Button("Compress")
+#
+# window1= sg.Window('File Compresser', layout=[
+#                                             [label1,input1,button1],
+#                                             [label2,input2,button2],
+#                                             [compress1]
+#                                                     ]
+#                    )
+# window1.read()
+# window1.close()
+
+'''
+Not complete yet , just created GUI interface only
+'''
+
+# ----------------------------------------------
+
+'''
+Exercise examples
+'''
+# import FreeSimpleGUI as sg
+#
+# feet_label = sg.Text("Enter feet: ")
+# feet_input = sg.Input()
+#
+# inches_label = sg.Text("Enter inches: ")
+# inches_input = sg.Input()
+#
+# button = sg.Button("Convert")
+#
+# window = sg.Window("Convertor",
+#                    layout=[[feet_label, feet_input],
+#                            [inches_label, inches_input],
+#                            [button]])
+#
+# window.read()
+# window.close()
+
+# -------------------------------
+
+# Bug-Fixing Exercise 1
+
+
+# -------------------------------
+# Bug-Fixing Exercise 1
+# import FreeSimpleGUI as sg
+#
+# label = sg.Text("What are dolphins?")
+# option1 = sg.Radio("Amphibians", group_id="question1")
+# option2 = sg.Radio("Fish", group_id="question1")
+# option3 = sg.Radio("Mammals", group_id="question1")
+# option4 = sg.Radio("Birds", group_id="question1")
+#
+# window = sg.Window("File Compressor",
+#                    layout=[[label],
+#                            [option1],
+#                             [option2],
+#                             [option3],
+#                             [option4],
+#                            ])
+#
+# window.read()
+# window.close()
+
+# ------------------------------
+'''
+connect the reposidary to the git hub
+
+crete repo in github , copy the url
+come to git menu - choose manage remotes , clcik add icon and paste the url and do the things , and 
+clcik push option then you can see the commits you made git in github
+
+'''
+
 
 
