@@ -3254,11 +3254,11 @@ follow Next step Todo GUI directory
 # import FreeSimpleGUI as sg
 #
 # label1 = sg.Text("Select the file to compress")
-# input1 = sg.InputText()
+# input1 = sg.Input()
 # button1 = sg.FileBrowse("Choose")
 #
 # label2 = sg.Text("Select the Folder to compress")
-# input2 = sg.InputText()
+# input2 = sg.Input()
 # button2 = sg.FolderBrowse("Choose")
 #
 # compress1=sg.Button("Compress")
@@ -3334,6 +3334,38 @@ come to git menu - choose manage remotes , clcik add icon and paste the url and 
 clcik push option then you can see the commits you made git in github
 
 '''
+from zip_creator import make_archive
 
+import FreeSimpleGUI as sg
+
+label1 = sg.Text("Select the file to compress")
+input1 = sg.Input(key='choose file input')
+button1 = sg.FilesBrowse('Choose',key="Choose file bt") # if you enter file you can select only
+
+label2 = sg.Text("Select the Folder to compress")
+input2 = sg.Input(key='Choose a folder input')
+button2 = sg.FolderBrowse('Choose',key="Choose folder bt")
+
+compress1=sg.Button("Compress")
+output_label=sg.Text(key='output', text_color="green")
+
+window1= sg.Window('File Compresser', layout=[
+                                            [label1,input1,button1],
+                                            [label2,input2,button2],
+                                            [compress1,output_label]
+                                                    ]
+                   )
+while True:
+
+    event,values=window1.read()
+    print(event)
+    print(values)
+    filepaths=values["Choose file bt"].split(";") # when you select two files for eg.'C:/Users/devap/Downloads/b.txt;C:/Users/devap/Downloads/a.txt' - Seperate both files by semi colan via split method
+    folder=values["Choose folder bt"]
+    make_archive(filepaths,folder)
+    window1["output"].update(value="Compresstion successfully")
+
+
+window1.close()
 
 
