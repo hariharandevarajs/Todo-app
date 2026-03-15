@@ -13,7 +13,7 @@
 #
 #         '''
 # '''
-# if i here print something like hello outside of the function , hello will execute print before  main.py file excute ,
+# if i here print something like hello outside of the function , hello will execute print before  cli.py file excute ,
 # How to Avoid this issue , use conditional statement here i will the condition
 #
 # '''
@@ -35,4 +35,22 @@ def get_todos(filepath=FILEBATH): #default function
 def write_todos(todo_arg,filepath=FILEBATH): # we should keep default parameter as lost one otherwise we get error.
     with open(filepath, 'w') as file:
         file.writelines(todo_arg)
+
+# ----------------------
+
+
+'''
+i used this function to final one , like do to  create stand alone applaication 
+other wise use above funtions is  enoguh 
+'''
+# FILEBATH=rf'C:\Users\devap\desktop\todoapp\Todo GUI\todo.txt'
+#
+# def get_todos(filepath=FILEBATH): #default function
+#     with open(filepath, 'r') as file_local:  # with method
+#         todo_local = file_local.readlines()
+#     return todo_local
+#
+# def write_todos(todo_arg,filepath=FILEBATH): # we should keep default parameter as lost one otherwise we get error.
+#     with open(filepath, 'w') as file:
+#         file.writelines(todo_arg)
 
